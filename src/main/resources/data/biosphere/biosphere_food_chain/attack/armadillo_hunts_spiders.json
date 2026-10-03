@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:armadillo"],
+  "objects": ["minecraft:spider", "minecraft:cave_spider"],
+  "behavior_hint": "attack"
+}

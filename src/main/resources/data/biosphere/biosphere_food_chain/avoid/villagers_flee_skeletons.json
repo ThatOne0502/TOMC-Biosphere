@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:wandering_trader", "minecraft:villager"],
+  "objects": ["#biosphere:skeleton_archers"],
+  "behavior_hint": "avoid"
+}

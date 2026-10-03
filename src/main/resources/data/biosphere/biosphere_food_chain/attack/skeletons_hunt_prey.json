@@ -1,0 +1,5 @@
+{
+  "subjects": ["#biosphere:skeleton_archers"],
+  "objects": ["#biosphere:passive_prey"],
+  "behavior_hint": "attack"
+}

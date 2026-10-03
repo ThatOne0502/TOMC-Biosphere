@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:chicken"],
+  "objects": ["minecraft:silverfish"],
+  "behavior_hint": "attack"
+}

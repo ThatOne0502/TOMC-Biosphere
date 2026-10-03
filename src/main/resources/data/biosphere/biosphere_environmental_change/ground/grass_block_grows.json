@@ -1,0 +1,12 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:grass_block"],
+  "result": ["minecraft:short_grass", "minecraft:fern"],
+  "random_tick_chance": 150,
+  "position": "positive_y",
+  "conditions": {
+    "condition": "minecraft:location_check",
+    "offsetY": 1,
+    "predicate": { "can_see_sky": true }
+  }
+}

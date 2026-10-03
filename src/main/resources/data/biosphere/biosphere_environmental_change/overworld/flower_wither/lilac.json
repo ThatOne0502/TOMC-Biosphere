@@ -1,0 +1,8 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:lilac"],
+  "result": ["minecraft:air"],
+  "position": "self",
+  "random_tick_chance": 200,
+  "summon": "{id:\"minecraft:item\", Item:{id:\"minecraft:magenta_dye\", count:1}}"
+}

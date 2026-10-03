@@ -1,0 +1,12 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:end_stone"],
+  "result": ["minecraft:chorus_flower"],
+  "random_tick_chance": 400,
+  "position": "positive_y",
+  "conditions": {
+    "condition": "minecraft:location_check",
+    "offsetY": 1,
+    "predicate": { "biomes": ["minecraft:end_highlands"], "can_see_sky": true }
+  }
+}

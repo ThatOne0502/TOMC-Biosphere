@@ -1,0 +1,8 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:white_tulip"],
+  "result": ["minecraft:air"],
+  "position": "self",
+  "random_tick_chance": 200,
+  "summon": "{id:\"minecraft:item\", Item:{id:\"minecraft:light_gray_dye\", count:1}}"
+}

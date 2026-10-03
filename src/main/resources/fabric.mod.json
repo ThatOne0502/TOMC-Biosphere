@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "biosphere",
+  "version": "${version}",
+  "name": "TOMC-Biosphere",
+  "description": "Data-driven mob relationship AI, eating interactions and random-tick ecology succession.\\n\\nDevelopment assisted by DeepSeek Harness (deepseek-v4-pro).",
+  "authors": ["ThatOne"],
+  "license": "GPL-3.0-or-later",
+  "environment": "*",
+  "icon": "assets/biosphere/biosphere_icon.png",
+  "mixins": ["biosphere.mixins.json"],
+  "accessWidener": "biosphere.classtweaker",
+  "entrypoints": {
+    "main": ["io.github.thatone0502.biosphere.Biosphere"],
+    "client": ["io.github.thatone0502.biosphere.Biosphere"],
+    "modmenu": ["io.github.thatone0502.biosphere.config.ModMenuIntegration"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "cloth-config": "*"
+  }
+}

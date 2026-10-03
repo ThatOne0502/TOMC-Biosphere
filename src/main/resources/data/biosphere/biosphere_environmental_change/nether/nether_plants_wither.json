@@ -1,0 +1,7 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:crimson_fungus", "minecraft:warped_fungus", "minecraft:crimson_roots", "minecraft:warped_roots", "minecraft:nether_sprouts"],
+  "result": ["minecraft:air"],
+  "random_tick_chance": 200,
+  "position": "self"
+}

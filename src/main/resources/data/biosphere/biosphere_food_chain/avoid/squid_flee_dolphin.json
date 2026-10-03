@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:glow_squid", "minecraft:squid"],
+  "objects": ["minecraft:dolphin"],
+  "behavior_hint": "avoid"
+}

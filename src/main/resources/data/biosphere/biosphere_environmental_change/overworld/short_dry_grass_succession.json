@@ -1,0 +1,7 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:short_dry_grass"],
+  "result": ["minecraft:tall_dry_grass", "minecraft:air"],
+  "random_tick_chance": 250,
+  "position": "self"
+}

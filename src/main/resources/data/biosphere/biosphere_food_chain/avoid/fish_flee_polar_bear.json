@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:cod", "minecraft:salmon"],
+  "objects": ["minecraft:polar_bear"],
+  "behavior_hint": "avoid"
+}

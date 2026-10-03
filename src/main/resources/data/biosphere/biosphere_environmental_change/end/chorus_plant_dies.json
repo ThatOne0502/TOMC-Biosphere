@@ -1,0 +1,11 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:chorus_plant"],
+  "result": ["minecraft:air"],
+  "random_tick_chance": 300,
+  "position": "self",
+  "conditions": {
+    "condition": "minecraft:location_check",
+    "predicate": { "biomes": ["minecraft:end_highlands"] }
+  }
+}

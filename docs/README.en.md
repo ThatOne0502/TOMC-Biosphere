@@ -1,27 +1,14 @@
 <p align="center">
-  <img src="src/main/resources/assets/biosphere/biosphere_logo.png" alt="TOMC-Biosphere" width="800">
+  <img src="../src/main/resources/assets/biosphere/biosphere_logo.png" alt="TOMC-Biosphere" width="800">
 </p>
 
 <p align="center">
-  <a href="docs/README.en.md">English</a> &nbsp;·&nbsp; <a href="docs/README.zh-CN.md">简体中文</a>
+  <a href="../README.md">English</a> &nbsp;·&nbsp; <a href="README.zh-CN.md">简体中文</a>
 </p>
-
-> [!WARNING]
-> **早期开发阶段 / Early Development**
->
-> 本项目仍处于非常早期的开发阶段。功能、数据格式、命令和 API 都可能发生重大变更，且不保证向后兼容。请勿用于生产环境或长期存档，升级前务必备份。
->
-> This project is in a very early stage of development. Features, data formats, commands, and APIs may change significantly without backward compatibility. Not recommended for production or long-term worlds. Always back up before updating.
->
-> **AI 辅助创作 / AI-Assisted**
->
-> 本项目在开发过程中使用了 AI 辅助（deepseek-v4-pro）。且并不是所有代码、文档与设计均经过人工审查与测试。
->
-> This project was developed with assistance from AI (deepseek-v4-pro). NOT all code, documentation, and design have been reviewed and tested by humans.
 
 # TOMC-Biosphere
 
-> 📘 **Data-driven guide** — [docs/data-driven.en.md](docs/data-driven.en.md)
+> 📘 **Data-driven guide** — [data-driven.en.md](data-driven.en.md)
 
 **TOMC-Biosphere** is a data-driven ecology mod for **Fabric** on **Minecraft 1.21.11**. It breathes life into your world with three interlocking systems — **food-chain relationships**, **eating interactions** and **random-tick environmental succession** — all driven by plain JSON files that you can extend with a data pack, no Java code required.
 
@@ -86,8 +73,8 @@ Changes to loaded data apply after the world is reloaded.
 
 ## License
 
-[GPL-3.0](LICENSE)
+[GPL-3.0](../LICENSE)
 
 ---
 
-> 📘 **Data-driven guide** — [docs/data-driven.en.md](docs/data-driven.en.md)
+> 📘 **Data-driven guide** — [data-driven.en.md](data-driven.en.md)

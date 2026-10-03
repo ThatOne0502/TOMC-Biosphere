@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "package": "io.github.thatone0502.biosphere.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MobMixin",
+    "MobAccessor",
+    "BlockBehaviourMixin",
+    "BlockStateMixin",
+    "SpreadingSnowyDirtBlockMixin",
+    "NyliumBlockMixin",
+    "CreeperMixin",
+    "SilverfishMixin",
+    "CactusBlockMixin"
+  ],
+  "client": [
+    "LivingEntityMixin",
+    "CowRenderStateMixin",
+    "CowRendererMixin",
+    "QuadrupedModelMixin",
+    "AbstractHorseRendererMixin",
+    "CamelRenderStateMixin",
+    "CamelRendererMixin",
+    "CamelModelMixin",
+    "MushroomCowRenderStateMixin",
+    "MushroomCowRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
