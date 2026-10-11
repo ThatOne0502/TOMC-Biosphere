@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:creeper"],
+  "objects": ["minecraft:ocelot"],
+  "behavior_hint": "avoid"
+}

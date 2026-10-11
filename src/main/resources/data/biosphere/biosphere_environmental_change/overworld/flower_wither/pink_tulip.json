@@ -1,0 +1,8 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:pink_tulip"],
+  "result": ["minecraft:air"],
+  "position": "self",
+  "random_tick_chance": 200,
+  "summon": "{id:\"minecraft:item\", Item:{id:\"minecraft:pink_dye\", count:1}}"
+}

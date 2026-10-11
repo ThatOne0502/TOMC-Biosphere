@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:vex"],
+  "objects": ["minecraft:allay"],
+  "behavior_hint": "attack"
+}

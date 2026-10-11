@@ -1,0 +1,14 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:grass_block"],
+  "result": ["minecraft:podzol"],
+  "random_tick_chance": 250,
+  "position": "self",
+  "conditions": {
+    "condition": "minecraft:location_check",
+    "offsetY": 1,
+    "predicate": {
+      "block": { "blocks": ["minecraft:leaf_litter"] }
+    }
+  }
+}

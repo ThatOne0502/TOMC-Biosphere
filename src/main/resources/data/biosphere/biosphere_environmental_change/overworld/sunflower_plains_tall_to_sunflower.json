@@ -1,0 +1,11 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:tall_grass", "minecraft:large_fern"],
+  "result": ["minecraft:sunflower"],
+  "random_tick_chance": 200,
+  "position": "self",
+  "conditions": {
+    "condition": "minecraft:location_check",
+    "predicate": { "biomes": ["minecraft:sunflower_plains"] }
+  }
+}

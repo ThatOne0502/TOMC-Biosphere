@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:ocelot"],
+  "objects": ["minecraft:creeper"],
+  "behavior_hint": "attack"
+}

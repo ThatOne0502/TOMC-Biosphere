@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:husk", "minecraft:zombie", "minecraft:zombie_villager", "minecraft:drowned"],
+  "objects": ["#biosphere:livestock"],
+  "behavior_hint": "attack"
+}

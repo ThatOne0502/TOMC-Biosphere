@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bogged",
+    "minecraft:parched",
+    "minecraft:skeleton",
+    "minecraft:stray",
+    "minecraft:wither_skeleton"
+  ]
+}

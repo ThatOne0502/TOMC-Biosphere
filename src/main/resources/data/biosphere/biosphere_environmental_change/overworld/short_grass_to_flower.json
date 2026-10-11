@@ -1,0 +1,20 @@
+{
+  "change_type": "setblock",
+  "origin": ["minecraft:short_grass", "minecraft:fern"],
+  "result": [
+    "minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:allium",
+    "minecraft:azure_bluet", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip",
+    "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley"
+  ],
+  "random_tick_chance": 300,
+  "position": "self",
+  "conditions": {
+    "condition": "minecraft:inverted",
+    "term": {
+      "condition": "minecraft:location_check",
+      "predicate": {
+        "biomes": ["minecraft:sunflower_plains", "minecraft:flower_forest"]
+      }
+    }
+  }
+}

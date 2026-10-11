@@ -1,0 +1,8 @@
+{
+  "biomes": ["minecraft:small_end_islands", "minecraft:end_barrens"],
+  "entity": "minecraft:phantom",
+  "category": "monster",
+  "weight": 8,
+  "min": 2,
+  "max": 4
+}

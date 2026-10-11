@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:phantom"],
+  "objects": ["minecraft:endermite"],
+  "behavior_hint": "attack"
+}

@@ -1,0 +1,83 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "1.17.19"
+    id 'maven-publish'
+}
+
+group = "io.github.thatone0502.biosphere"
+
+// ---- 构建版本号：tomc-<modid>-<主>.<次>.<修>.<构建次数>-<平台>+mc<mc版本>.jar ----
+def modId = "biosphere"
+def baseVersion = "0.1.0"      // 主.次.修（SemVer，写入 fabric.mod.json 的 version 字段）
+def platform = "fabric"
+def minecraftVersion = "1.21.11"
+
+// 构建次数：从 build_number.properties 读取（首次为 0），每次 build 成功后累加。
+def buildNumberFile = file("build_number.properties")
+def buildNumber = 0
+if (buildNumberFile.exists()) {
+    def props = new Properties()
+    buildNumberFile.withInputStream { props.load(it) }
+    buildNumber = (props.getProperty("buildNumber") ?: "0").toInteger()
+}
+
+base {
+    archivesName = "tomc-${modId}"
+}
+version = "${baseVersion}.${buildNumber}-${platform}+mc${minecraftVersion}"
+
+loom {
+    accessWidenerPath = file("src/main/resources/biosphere.classtweaker")
+}
+
+repositories {
+    maven { url 'https://api.modrinth.com/maven' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraftVersion}"
+    // 官方 Mojang 映射（mojmap）：Fabric 1.x 时代全用 mojmap，不用 yarn。
+    // 注意：mojmap 工程里类名是 BuiltInRegistries/Item.Properties/CommandSourceStack 等，
+    // 与社区教程常见的 Yarn 名（Registries/Item.Settings/ServerCommandSource）不同，勿混用。
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:0.19.5"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.141.6+${minecraftVersion}"
+    modImplementation "maven.modrinth:cloth-config:21.11.153+fabric"
+    modImplementation "maven.modrinth:modmenu:17.0.1"
+}
+
+processResources {
+    // 把 baseVersion（合法 SemVer）展开进 fabric.mod.json 的 ${version}。
+    // jar 文件名用上面的完整 version（含构建次数与 +mc 后缀），但 fabric.mod.json 的
+    // version 字段须是合法 SemVer，故这里用 baseVersion 而非完整 version。
+    filesMatching('fabric.mod.json') {
+        expand "version": baseVersion
+    }
+}
+
+// 目标 Java 版本用 toolchain 声明：环境 JDK 低于目标（例如环境是 17、目标是 21）时，
+// 只有 toolchain 会让 foojay 自动 provision 对应 JDK，否则 javac 报「不支持发行版本」。
+java {
+    withSourcesJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+// 构建成功后累加构建次数（doLast 只在 build 任务成功完成时执行，失败不累加），
+// 并清理 build/libs 中不属于本次版本号的旧产物——目录里始终只留最新一代 jar。
+tasks.named("build") {
+    doLast {
+        buildNumberFile.text = "buildNumber=${buildNumber + 1}\n"
+
+        def libsDir = layout.buildDirectory.dir("libs").get().asFile
+        def prefix = "tomc-${modId}-${version}"
+        if (libsDir.isDirectory()) {
+            libsDir.listFiles({ f -> f.isFile() && f.name.startsWith("tomc-${modId}-") && f.name.endsWith(".jar") && !f.name.startsWith(prefix) } as FileFilter)
+                    ?.each { stale ->
+                        if (stale.delete()) {
+                            logger.lifecycle("已清理旧构建产物: ${stale.name}")
+                        }
+                    }
+        }
+    }
+}

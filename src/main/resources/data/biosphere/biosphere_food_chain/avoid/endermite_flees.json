@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:endermite"],
+  "objects": ["minecraft:phantom", "minecraft:shulker"],
+  "behavior_hint": "avoid"
+}

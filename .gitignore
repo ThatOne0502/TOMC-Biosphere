@@ -1,0 +1,48 @@
+# ============================================================
+# TOMC-Biosphere — 面向公开 GitHub 仓库的忽略规则
+# ============================================================
+
+# ---- Gradle ----
+.gradle/
+build/
+out/
+classes/
+
+# 构建计数：由 build.gradle 在每次构建后自增，属于本地状态，不入库
+build_number.properties
+
+# ---- Fabric / Minecraft 运行目录（runServer / runClient 生成）----
+run/
+logs/
+crash-reports/
+.fabric/
+remappedSrc/
+
+# ---- IDE ----
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+bin/
+.metadata/
+*.launch
+
+# ---- 操作系统文件 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 日志与崩溃转储 ----
+*.log
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+
+# ---- 注意 ----
+# 本仓库不忽略 *.jar，因为 gradle/wrapper/gradle-wrapper.jar 必须随仓库分发，
+# 否则 clone 之后无法用 ./gradlew 构建。请勿添加 `*.jar` 规则。

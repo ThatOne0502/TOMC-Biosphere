@@ -1,0 +1,5 @@
+{
+  "subjects": ["minecraft:shulker"],
+  "objects": ["minecraft:endermite"],
+  "behavior_hint": "attack"
+}
